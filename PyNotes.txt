@@ -1,0 +1,1519 @@
+                           -----PYTHON NOTES------
+ 
+ ###########################################################################             
+              
+ --- Veri Tipleri ---
+ 
+ 
+ 1 - İnt    -> Tam sayı olarak nitelendiridiğimiz veri tipidir.
+ 2 - Float  -> Ondalıklı sayı olarak nitelendiridiğimiz veri tipidir.  
+ 3 - Bool   -> True yada False döndüren veri tipimizdir.
+ 4 - String -> Metinsel veri tutar.
+ 
+ -> type()     : Verinin hangi değer aldığını gösterir.
+ -> print()    : Ekrana yazdırma komutudur.
+ -> input()    : Kullanıcıdan girdi almak için kullanılır.
+ -> len(string): Karakter sayısını verir.
+ -> sep kavramı: print fonksiyonuyla yazdığımız metinleri birbirinden ne ile ayıracağımızı belirlememizi sağlar. 
+ 
+ ###########################################################################
+ 
+  --- Veri Tipi Dönüşümleri --- 
+  
+
+-> type() : Bu fonksiyon ile veri tipini öğreniyoruz.
+
+1 - Tam Sayı Veri Tipi Dönüşümü int()
+
+-> deger=98.540
+   yenideger=int(deger)
+   print(yenideger)  
+   
+   : Burada yapılan işlem ilk olarak bir deger değişkeni tanımladık. Bu deger
+   değişkeni içerisinde ondalıklı olarak "98.540" sayısını atadık.
+   
+   Float veri tipinde olan bu sayıyı, tam sayı değerine dönüştürmek için ilk 
+   olarak ikinci yeni bir değişken tanımlaması yaptık. 
+   
+   yenideger adında oluşturduğumuz yeni değişken içerisine tam sayı dönüşüm 
+   fonksiyonunu kullanarak içerisine deger değişkenini girdik ve dönüştürülmüş 
+   olan yeni değişken değerini ekran çıktısı olarak aldırdık. Ekran çıktısı 
+   ise bu şekildedir: 98
+   
+   
+   
+2 - Ondalıklı sayı veri tipi dönüşümü float()
+
+-> deger=54
+   yenideger=float(deger)
+   print(yenideger)
+   
+   Çıktı :  54.0
+
+
+3 -  Karakter dizisi veri tipi dönüşümü str()
+
+-> deger = ("İleri Programlama", "Yapay Zekaya Giriş", "Mobil Programlama")
+   yenideger=str(deger)
+   print(yenideger)
+
+
+4 - Karakter tipi dönüşümü chr()
+ : Değişkene atanmış olan sayısal veriyi, ondalıklı karakter değerine 
+   dönüştürmek için kullanılır. chr() fonksiyonu, Unicode olan kod verisini; 
+   tam sayının karşılığı olan temsili karakteri döndürür.
+
+ 
+->  harf=84
+    chrharf=chr(harf)
+    print(chrharf)
+    
+    
+    Çıktı : T
+    
+ ###########################################################################
+
+ ---- Değer Tip Dönüşüm Fonksiyonları ----
+ 
+ -> repr(x)     : x değerini bir ifade dizgisine dönüştürür.
+ -> eval(str)   : Bir dizeyi değerlendirir ve bir nesne döndürür.
+ -> tuple(x)    : x değerini bir demete dönüştürür.
+ -> list(x)     : x değerini bir listeye dönüştürür.
+ -> set(x)      : x değerini bir set türüne dönüştürür.
+ -> frozenset(x): x değerini bir frozenset dönüştürür.
+ -> dict(d)     : değişken değerini sözlüğe dönüştürür.
+
+ 
+ ###########################################################################
+ 
+ ---- Matematiksel Operatörler ----       
+
+1 - "+"  -> Toplama
+2 - "+"  -> Çıkarma
+3 - "*"  -> Çarpma
+4 - "/"  -> Bölme    
+5 - "**" -> Üs
+6 - "%"  -> Mod Alma
+7 - "//" -> Tam Bölme
+
+!! : Bir sayı tamda bölünüyorsa çıkan sayı hep tipi float olarak görünür.
+!! : Pythonda da işlem önceliği vardır.
+
+
+###########################################################################
+
+---- Operatörler ----
+
+-> Aritmetik operatorler: Toplama, Çıkarma, Çarpma, Tam Bölüm, Ondalıklı Bölüm, 
+Mod Alma, Üs Alma
+
+-> Karşılaştırma islemlerinde kullanılan operatorler: ==, !=, >, <, >=,<=
+
+-> Mantıksal operatorler: AND, OR, NOT,
+
+-> Bit duzeyi islemlerde kullanılan operatorler: &, |, ^, ~, <<, >>
+
+->Ekstra: in,not in, is, is not
+
+
+
+
+
+a,b,c=5,10,15
+
+print(a==b)#eger ki iki ifade esitse True, değilse False
+print(a==c)
+
+print(a!=b)#eger ki iki ifade esit degilse True, esitse False
+print(a!=c)
+
+print(a>b)#eger ki ilk ifade ikinciden buyukse True, degilse False
+print(a>c)
+
+print(a<b)#eger ki ilk ifade ikinciden kucukse True, degilse False
+print(a<c)
+
+print(a>=b)#eger ki ilk ifade ikinciden büyük VEYA eşitse True, değilse False
+print(a>=c)
+
+print(a<=b)#eger ki ilk ifade ikinciden küçük VEYA eşitse True, degilse False
+print(a<=c)
+
+
+###########################################################################
+
+---- Yorum Satırı Oluşturma  ----   
+
+
+#// : Yorum Satırı 
+#   : Yorum Satırı 
+""" Çoklu Yorum Satırı Oluşturmak için kullanılır """
+
+
+########################################################################### 
+
+---- Değişken Tanımlama ----
+
+Nedir : Değişken en kaba tabiriyle geçici olarak bir veri sakladığımız depoya
+bir alana değişken diyoruz.
+
+ -> Değişken Tanımlama Kuralları :
+ 
+ 1 - Tanımladığınız değişkenin adı anlamlı bir ifade olmalıdır. 
+Örneğin s1 yerine sayi1 demek daha anlamlı olacaktır.
+
+2 - Birden fazla kelimeden oluşan değişkenlerde camelCase yöntemini kullanın. 
+İlk kelimenin ilk harfi küçük, diğer kelimelerin ilk harflerini büyük yapmak 
+değişkenin okunabilirliği açısından önemli olacaktır. 
+
+3 - Sabit tanımlarken büyük harfle yazın.
+
+4 - Asla özel sembolleri kullanmayın !, @, #, $, %, vb.
+
+5 - Değişken isimlerini sayı ile başlamayın.
+
+6 - Sabitler Python modüllerine konur ve değiştirilmemelidir.
+
+7 - Sabitler ve değişkenler ASCII harfleri yada _ ile başlar ve yine harf ve 
+rakamlar tanılanmaya devam eder.
+
+8 - Programa ait ifadeler değişken adı olarak kullanılmaz.
+
+9 - Değişken isimlerinde Türkçe diline özgü karakterler kullanılmamalıdır.
+(Python içinde kullanılabilir ancak dil alışkanlığı nedeniyle kullanılmaması 
+tavsiye edilir.)
+
+
+
+###########################################################################
+
+---- Karakter(string) Metodları ----
+
+1 - Split Metodu :
+
+-> Split metodu, karakter dizisinde belirtilen bir karaktere göre 
+parçalama işlemi yapar. 
+
+message = 'Hello, There.'
+message = message.split(',')   # ['Hello',' There']
+
+
+
+2 - Upper Metodu :
+
+-> Upper metodu, karakterleri büyük harfe çevirir.
+
+message = 'Hello There.'
+message = message.upper()  # HELLO THERE.
+
+
+
+3 - Lower Metodu :
+
+-> Lower metodu, karakterleri büyük harfe çevirir.
+
+message = 'HELLO THERE.'
+message = message.upper()  # Hello There.
+
+
+
+4 - Title() Metodu:
+ 
+-> karakter dizisindeki her kelimenin baş harfini 
+büyük harfe çevirir.
+
+
+
+5 - capitalize() Metodu:
+
+-> karakter dizisindeki sadece ilk kelimenin baş harfini büyük harfe çevirir.
+
+
+
+6 - Strip Metodu:
+
+-> Strip metodu, karakter dizisinin baş ve sondaki boşluk karakterlerini siler. 
+
+username = "     PrOfEsOr     "
+x = username.strip()
+print("my username is +  x")  # my username is sadikturan
+
+
+
+7 - Replace Metodu :
+
+-> Replace metodu karakter güncellemesi için kullanılır. 
+
+
+message = 'My name is  PrOfEsOr'
+message = message.replace('PrOfEsOr','Furuk')  # My name is Furuk
+
+
+
+8 - Find Metodu :
+
+-> Find metodu verilen string ifade içinde arama yapar ve bulduğu ilk indeks 
+numarasını döndürür. Eğer bulamazsa exception döndürür.
+
+txt = "My name is  PrOfEsOr."
+x = txt.find("name")
+print(x)  # x = 3
+
+
+
+9 - Index Metodu :
+
+-> index metodu verilen string ifade içinde arama yapar ve bulduğu ilk 
+indeks numarasını döndürür. Eğer bulamazsa find metodundan farklı olarak 
+geriye -1 değerini döndürür. 
+
+
+txt = "My name is  PrOfEsOr."
+x = txt.index("name")
+print(x)  # x = 3
+
+
+10 - endswith()
+
+
+->  Dize belirtilen değerle bitiyorsa true döndürür
+
+11 - title() 
+
+-> Her kelimenin ilk karakterini büyük harfe dönüştürür
+
+
+
+###########################################################################
+
+---- PYTHON  GENEL Bilgiler -----
+
+
+
+len     : Uzunluk
+strip   : Temizleme ,Düzeltme
+ltrip   : Metnin solunu temizleme , düzletme.
+rtrip   : Metnin sağınnı temizleme , düzeltme.
+format  : Formatlama.
+split   : Parçalama.
+join    : Birleştirme.
+find    : Karakter indeksini bulma.
+replace : Metin değiştirme.
+count   : Metin sayma.
+sort    : Metin sıralama
+
+
+-> Özel karakterler ile
+
+
+\n   : Yeni satır.
+\r   : Satır başı.
+\t   : Tab(4 boşluk).
+
+
+-> Kod Parçaları
+
+change_char()   : Karakter değişme 
+
+reverse_char()  : Karakterleri ters çevirme.
+
+reverse_word()  : Kelimleri ters çevirme.
+
+
+
+###########################################################################
+
+---- Koşul Yapıları ----
+
+
+
+1- If-Else-Elif Yapıları
+: Eğer ki sorguladığımız koşul durumunun sonucu True(0 veya null değil) ise if 
+  veya elif bloğu çalışacaktır.
+
+: Eğer ki sorguladığımız koşul durumu için if-else if blokları çalışmazsa else 
+  bloğu çalışacaktır.
+
+--Syntax Yapısı:
+    if sorgulanacak durum:
+
+    if blogunun icerisine yazilacak kod
+
+    elif sorgulanacak durum:
+
+    elif blogunun icerisine yazilacak kod
+    ..
+
+    else:
+
+    else blogunun icerisine yazilacak kod
+
+
+-> if 2>3:
+    print("If bloguna girdi.")
+   elif 6>7:
+    print("Elif bloguna girdi.")
+   else:
+    print("Else bloguna girdi") 
+
+
+###########################################################################
+
+---- Döngüler ----
+
+
+-> Belirli bir koşul durumu sağlandığı sürece, kod bloğu içerisindeki kodların 
+tekrar tekrar çalışmasını sağlayan yapılara döngü denir.
+
+1 - While Döngüsü
+2 - For Döngüsü 
+
+
+
+
+1-A- While Döngüsü 
+
+--Syntax Yapısı:
+ while kontrol_edilecek_kosul:
+
+    dongu_icerisinde_yapilacak_islemler
+
+
+
+--Açıklama:
+
+Eğer ki kontrol_edilecek_kosul değeri True değere eşit olduğu sürece 
+dongu_icerisinde_yapilacak_islemler sürekli bir şekilde çalışacaktır
+
+i=0
+print("Dongu burada basliyor...")
+while i<10:
+    print(i,end=" ")
+    i+=1
+print("\nDongu sonlandi...")
+
+
+
+
+
+i=0
+while i<100:
+    print(i)
+
+!! Sonsuz döngü.
+
+
+###########################################################################
+
+
+2-A- For Döngüsü
+
+For döngüsünü genel olarak belirli sayıda tekrar edilecek durumlarda veya 
+Liste-String gibi veri kümelerinin elemanları üzerinde gezinmek için kullanırız.
+
+--Syntax Yapısı:
+
+ for degisken in veri_kumesi:
+
+    dongu_icerisinde_yapilacak_islemler
+    
+    
+    
+ --Acıklama:
+ 
+ 
+ 
+Veri kümesi içerisinde elemanlar üzerinde tek tek gezinmemizi sağlayacak, 
+veri kümesinin uzunluğunun aşıldığı durumda False sonuç üretecek ve döngü sonlanacak
+
+String Üzerinde Döngü Yardımıyla Gezinme:
+
+
+
+str1="ogunbirinci"
+for ch in str1:
+    print(ch,end=" ")
+
+
+Çıkıt : o g u n b i r i n c i 
+
+
+###########################################################################
+
+-> RANGE Fonksiyonu
+
+# Fonksiyona vereceğimiz belirli argümanlara göre sıralı sayı üretmemizi sağlar
+
+Nasıl Kullanılır?
+
+1- range(son_deger): 0 ile son_deger arasında 1'er 1'er artarak sayı üretir, 
+son_deger dahil değildir.
+
+
+2- range(ilk_deger,son_deger): ilk_deger ile son_deger arasında 1'er 1'er artarak 
+sayı uretir, son_deger dahil değildir
+
+
+3 - range(ilk_deger,son_deger,artis_miktari): ilk_deger ile son_deger arasında 
+artis_miktari kadar artarak sayı uretir, son_deger dahil değildir.
+ 
+ 
+ 
+
+for sayi in range(100):
+    print(sayi,end=" ")
+
+
+Çıktı:  0 dan başlayarak 100' e kadar 100 dahil olmayarak yazdırır.
+
+
+
+
+-> Enumerate Fonksiyonu 
+
+# enumerate fonksiyonu, nesneleri numaralandırmak için kullanılır. 
+Daha açık ifade etmek gerekirse bir listedeki hem elemanı hem de indeksi getirir.
+    
+
+
+
+-> Zip Fonksiyonu
+
+# zip() fonksiyonun önemli kullanım alanlarından biri de iki veya daha liste 
+içerisinde tek hamleyle gezmeye imkan tanımasıdır.
+
+
+
+
+diller = ["Java", "C", "Python", "Kotlin"]
+siralar = [1,2,3,4]
+for i,j in zip(siralar, diller):
+    print(i,j)
+
+
+###########################################################################
+
+-> Kaçış İfadeleri 
+
+1- break:Herhangi bir koşula göre döngüyü sonlandırmak için kullanılan 
+bir anahtar kelimedir.
+
+2 - continue: Herhangi bir koşula göre döngünün iterasyonunu sonlandırmak ve 
+bir sonraki iterasyona geçmek için kullanılan bir anahtar kelimedir.
+
+3 - pass: Herhangi bir koşula göre pass anahtar kelimesinin kullanıldığı 
+satırın atlanması için kullanılan bir anahtar kelimedir.
+
+
+
+
+###########################################################################
+
+
+---- PYTHONDA LİSTELER ----
+
+
+   -> Listeler yapıları gereği stringlere oldukça benzerler ve kullandıkları 
+yerler de çok yararlı olanbir veri tipidir.Tıpkı stringler gibi indekslenirler
+parçalanırlar ve üzerinde değişik işlemler yapabildiğimiz metodlar bulunur.
+Ancak listelerin stringlerden önemli farkları da bulunmaktadır.Listeler değişti-
+rilebilr bir veri tipidir.
+
+
+   -> Lİstelerde değişik veri tipleri de saklayabiliyoruz.
+   
+   =liste  = [3,4,5,"ELma",7,6.3,5]
+   =print(liste)
+
+
+   -> Listelere ekleme yapabiliyoruz.
+   
+   liste.append("Armut") bu en sona ekleme yapar.
+   
+   -> Listelerde değişim de yapabiliyoruz.
+   
+   liste[2] = "Kavun" = 2. indekse sahip değeri kavun ile değiştik.
+
+
+
+
+###########################################################################
+
+
+---- Tuples(Demetler) ----
+
+
+# Neden İhtiyacımız Var?
+
+
+-> Çok sayıda değişkeni-değeri bir arada saklayabilmek, daha kolay şekilde 
+erişebilmek için kullanıyoruz. Aynı ya da farklı türde birden çok değeri 
+bir arada saklamamıza imkan veren bir yapıdır.
+
+
+-> Listeden en önemli farklı, demetler oluşturulduktan sonra yeni eleman eklenemez,güncellenemez,silinemez.
+
+
+# Demetler Nasıl Tanımlanır?
+
+1.tuple() keywordü ile
+2. () ile
+
+
+###########################################################################
+
+
+---- Dictionary(Sözlük) ----
+
+
+# Neden İhtiyacımız Var?
+
+-> Elemanları anahtar-değer(key-value)yapısında saklamak için kullanılır.  
+Sözlükler üzerinde ekleme,silme,güncelleme gibi işlemler yapılabilir
+
+-> key - value
+
+
+# Sözlükler Nasıl Tanımlanır?
+
+1. dict() keywordü ile
+2. {} ile
+
+---------------------------
+
+sozluk=dict()
+sozluk2={}
+print(type(sozluk))
+print(type(sozluk2))
+
+
+
+---------------------------
+
+anahtar1":"deger1","anahtar2","deger2"}
+
+sayiSozlugu={"1":"bir","2":"iki","3":"uc"}
+print(sayiSozlugu["1"]) # Çıktı : bir
+print(sayiSozlugu["2"]) # Çıktı : iki
+print(sayiSozlugu["3"]) # Çıktı : uc
+
+-> Eğer bu dict içine değer atama yada güncelleme yapmak istiyorsak;
+
+
+sayiSozlugu['4'] = 'dört' : bu şekilde yeni veri key-value ile birlikte eklemiş
+olduk.
+
+-> İç içe dict de tanımlanabilinir.
+
+ogrenciler = {
+     100: {
+         "ad": "prof",
+         "soyad": "prof",
+         "yas": 41
+     },
+     101:{
+         "ad": "furuk",
+         "soyad": "furuk",
+         "yas": 21
+     }
+
+}
+
+###########################################################################
+
+
+---- Dictionary(Sözlük) Metotları ----
+
+
+-> clear()     : Sözlükteki tüm öğeleri kaldırır.
+
+-> copy()	   : Sözlüğün bir kopyasını döndürür.
+
+-> fromkeys()  : Belirtilen anahtarları ve değerleri içeren bir sözlük döndürür.
+
+-> get()       : Belirtilen anahtarın değerini döndürür.
+
+-> items()     : Her anahtar değer çifti için bir tuple içeren bir liste döndürür.
+
+-> keys()      : Sözlüğün anahtarlarını içeren bir liste döndürür.
+
+-> pop()       : Belirtilen anahtara sahip öğeyi kaldırır.
+
+-> popitem()   : Son eklenen anahtar-değer çiftini kaldırır.
+
+-> setdefault(): Belirtilen anahtarın değerini döndürür. Anahtar mevcut değilse:
+anahtarı belirtilen değerle yerleştirir.
+
+-> update()    : Sözlüğü belirtilen anahtar-değer çiftleriyle günceller.
+
+-> values()    : Sözlükteki tüm değerlerin bir listesini döndürür.
+
+
+###########################################################################
+
+
+---- Sets(Kümeler) ----
+
+# Neden İhtiyacımız Var?
+
+-> Matematikte kullandığımız küme konusunun Python dilindeki karşılığıdır. 
+Listeler ve demetler gibi birden çok elemanın bir arada saklanabilmesine olanak
+sağlar ancak demetlerin aksine değiştirilebilir yapılardır.
+
+-> İndekslenemez , sıralanamaz.
+
+# Kümeler Nasıl Tanımlanır?
+1. set() keywordü ile
+2. {} ile, ancak direkt değer atamamız gerekir aksi halde sözlük yapısı oluşur
+
+
+-> Çoğu Dict metotları Kümelerde de çalışır.
+
+
+
+
+
+###########################################################################
+
+
+-----  List Comprehension -----
+
+-> List Comprehension, mevcut listeler üzerinden bir liste oluşturmak için 
+kullanılan bir yapıdır.
+
+-> Comprehension, genel ifade ile başka bir dizi kullanarak liste, sözlük ve küme dizileri oluşturmak için kısa kod bloğu yazma yöntemidir.
+
+
+
+
+liste = [10,4,7,9,70]
+
+sayilar = []
+
+for i in liste:
+    i *= 2
+    sayilar.append(i)
+
+# [expression for item in list]
+# sayilar = [i*i for i in range(10)]
+# sayilar = [i*2 for i in liste]
+
+
+
+###########################################################################
+
+---- Functions(Fonksiyonlar) -----
+
+
+#Neden İhtiyacımız Var?
+
+
+-> Yazacağımız kodları alt parçalara bölebilmek ve kodun anlaşılabilirliğini 
+arttırmak için
+
+
+->Program içerisinde birden çok kez tekrar edicek durumları tek bir fonksiyon 
+içerisinde yazıp kod tekrarını önlemek için
+
+
+
+#Fonksiyon Tanımlanması
+
+
+->Syntax Yapısı:
+
+def fonksiyon_ismi(fonksiyon_argumanlari):
+
+    fonksiyonda_yapilacak_islemler
+
+
+
+
+
+#Local ve Global Kavramı
+
+
+
+-> Fonksiyon içerisinde tanımladığımız değişkenler local değişkenlerdir ve 
+sadece fonksiyon blokları içerisinde kullanılabilir. Main fonksiyon içerisinde tanımladığımız değişkenler ise global değişkenlerdir ve tüm kod blokları 
+içerisinde kullanılabilir.
+
+
+def sayiDegistir(x):
+    print(y)
+    z=int()#local degisken
+    x=5#local degisken
+
+y=50#global degisken
+sayiDegistir(y)
+print(y)
+
+
+###########################################################################
+
+---- Gömülü Fonksiyonlar -----
+
+
+#Zip Fonksiyonu
+
+-> İki veya daha fazla listeyi,sözlüğü birleştirip tek bir zip objesi elde 
+edebildiğimiz fonksiyon.
+
+
+İki Listenin Ziplenmesi:
+
+liste1=[i for i in range(10)]
+liste2=[j for j in range(10,20)]
+
+liste3=zip(liste1,liste2)
+print(liste3)
+<zip object at 0x0000010E70A1E9C0>
+
+
+---------------------------
+
+#Map Fonksiyonu
+
+-> Fonksiyonun amacı, bir iterasyon yapısındaki elemanların tümüne aynı işlemi uygulamaktır.
+
+map(fonksiyon ismi, liste)
+
+
+---------------------------
+
+#Filter Fonksiyonu
+
+->Filter fonksiyonu bir fonksiyondan True dönen elementler için ayrı bir liste 
+oluşturur
+
+filter(fonksiyon ismi,liste)
+
+
+
+---------------------------
+
+#Enumerate Fonksiyonu
+
+-> Fonksiyon, içerisine aldığı bir listenin hem değerlerini hem de indekslerini birleştirip tek bir değer olarak döndürüyor.
+
+
+###########################################################################
+
+------- Hata Yönetimi -------
+
+
+
+#Neden İhtiyacımız Var?
+
+->Yazdığımız kodların sorunsuz çalışabilmesi için kodda oluşabilecek tüm olası 
+hataları önceden düşünüp bunlara önlemler almamız gerekir. Örneğin internetten 
+veri çektiğimiz bir projede, internet bağlantısının kopması durumunda programın 
+çalışması aksayacaktır. Böyle durumlara karşı önceden hazırlıklı olmalı ve 
+çözümler sunmamız gerekir.
+
+#Hata Çeşitleri
+
+-> Syntax Hatası: Kodu yazarken yanlış yazdığımız kodlardan meydana gelir. 
+Bu durumlarda derleyici bize direkt hata verir ve düzeltebiliriz.
+
+-> Mantık Hatası: Kodun işleyişinde yaptığımız hatalardır, derleyici tarafından 
+bize bir uyarı verilmediği için yakalanması daha zor hatalardır.
+
+
+#Hata Türleri:
+
+AssertionError,AttributeError,EOFError,FloatingPointError,GeneratorExit,
+ImportError,IndexError,KeyError,KeyboardInterrupt,MemoryError,NameError, NotImplementedError,OSError,OverflowError,ReferenceError,RuntimeError,
+StopIteration,SyntaxError,IndentationError,TabError,SystemError,SystemExit, TypeError,UnboundLocalError,UnicodeError,UnicodeEncodeError,UnicodeDecodeError,
+UnicodeTranslateError,ValueError,ZeroDivisionError
+
+
+
+
+# Hata Yakalama(Try-Except Yapısı)
+
+-> Kodda hata olma ihtimali olan yapıyı Try bloğunun içerisine, hata meydana 
+geldiğinde çalışacak olan ifade ise Except bloğuna yazılır.
+
+
+try:
+    sayi1=int(input("Lutfen ilk sayiyi giriniz:"))
+    sayi2=int(input("Lutfen ikinci sayiyi giriniz:"))
+    print(sayi1/sayi2)
+except:
+    print("Hatali deger girdiniz!")
+
+
+
+---------------------------
+
+#Kendi Hatalarımızı Tanımlama
+
+
+-> Bazı durumlarda hazır olarak verilen hatalar bize yeterli olmayabilir, 
+bu yüzden yazacağımız kodlarda kendi hatalarımızı oluşturmamız gerekebilir. 
+İki farklı şekilde üretebiliriz;
+
+1. raise Exception() ile: Direkt olarak except kısmında yakalanacaktır.
+
+2. raise hazir_hata_sinifi() ile: Hazır olarak tanımlanmış hata sınıfların 
+kullanıldığı için özel olarak yakalanacaktır. Oluşturacağınız hata, hazır hata sınıflarından en çok hangisine uyuyorsa onunla yazmalısınız.
+
+
+---------------------------
+
+#Assertion İfadesi
+ 
+-> Assert ifadesi ile doğruluk veya yanlışlığından emin olmadığımız durumlar tanımlayabiliriz. Eğer ki yanlış ise AssertionError hatası alırız, doğruysa 
+herhangi bir hata olmadan program çalışmaya devam eder. AssertionError içerisinde verilecek hata mesajını da biz belirleyebiliriz.
+
+sayi1=int(input("Lutfen pozitif bir sayi giriniz:"))
+assert sayi1>0
+
+###########################################################################
+
+
+----- Nesne Tabanlı Programlama(OOP) -----
+
+
+#Neden İhtiyacımız Var?
+
+-> Nesne Tabanlı Programlama, birçok yazılım geliştirme yöntemlerinden bir 
+tanesidir.
+
+#Nesneye Yönelik Programlama;
+
+-> yazdığımız kodları karışık ve anlaşılması güç yapısından kurtararak daha anlaşılabilir bir kod yapısı oluşturulmasını
+
+-> kodların küçük parçalara ayrılarak daha fazla işlev kazanmasını
+
+-> bir kez yazılan kodların tekrar tekrar kullanılmasını
+sağlamaktadır.
+
+
+#Sınıf Nedir?
+
+-> Ortak davranış ve özelliklere sahip nesneleri tanımlamak için kullandığımız kavramdır.Daha önceden gördüğümüz liste,demet,string gibi veri tiplerinin 
+her biri hazır sınıflardan ürettiğimiz nesnelerdi. İşte biz de kendi 
+nesnelerimizi oluşturabilmek için kendi sınıflarımızı oluşturacağız.
+
+
+
+-> Örneğin, bir sınıftaki öğrencileri düşünelim; tüm öğrencilerin ortak olarak 
+kendine ait isim,soyisim,ders notları gibi bilgileri vardır ve herkesin bilgileri 
+kendine özeldir.
+
+
+#Nesne Nedir?
+
+-> Bir sınıftan oluşturduğumuz örneklere(instance) nesne ismi verilir. 
+Örneğin Ogrenci sınıfından üreteceğimiz Ogun,Burak,Beril,Eda öğrencileri 
+Ogrenci sınıfının bir örneği ve nesnesi olacaktır. Hepsinde ortak olarak 
+isim,soyisim, ders notları gibi ozellikler bulunabilir ancak hepsinin değerleri 
+farklı olabilir.
+
+
+class Ogrenci():
+    print("Ogrenci sinifi olusturuldu")
+
+
+---------------------------
+
+1-Encapsulation(Kapsülleme)
+
+-> Bir nesnenin metotlarını ve bilgilerini diğer nesnelerden saklayarak ve 
+bunlara erişimini sınırlandırarak yanlış kullanımlardan koruyan bir konsepttir.
+
+2-Inheritance(Miras)
+
+-> Bir sınıftan başka bir sınıf oluştururken aralarında alt-üst hiyerarşisi 
+oluşturmak ve bu sınıflar arasında ortak yapılar oluşturmak için kullanılır.
+
+3-Polymorphism(Çok Biçimlilik)
+
+-> Çok biçimlilik anlamına gelmektedir. Bir metodun bir çok nesne tarafından 
+kullanılması anlamına gelmektedir.
+
+4-Abstraction(Soyutlama)
+
+-> Gereksiz karmaşıklığın gizlenerek oluşturulan nesnelerin sadece gerekli 
+kısımlarının yazılımın diğer kısımlarına sunulması işlemidir.
+
+
+---------------------------
+
+
+1.Sınıf Nitelikleri(Class Attribute)
+
+-> Sınıflara eklediğimiz özellikler, sınıf nitelikleri olarak adlandırılır. 
+Örneğin; Ogrenci sınıfını ele alırsak, bir Ogrenci sınıfının nitelikleri 
+ad,soyad ve dersleri olabilir.
+
+
+class Ogrenci:
+    isim="Ogun"
+    soyisim="Birinci"
+    dersler=["Matematik","Turkce","Fizik"]
+
+
+print(Ogrenci.isim)
+print(Ogrenci.soyisim)
+print(Ogrenci.dersler)
+
+
+---------------------------
+
+2. Nesne Nitelikleri(Örneklem Nitelikleri)
+
+#init(self) Fonksiyonu ve Constructor(Yapıcı) Kavramı:
+
+-> init fonksiyonu Python içerisinde tanımlanmış özel bir fonksiyondur, bir sınıftan nesne tanımladığımız zaman gerekli nitelikleri tanımlamak ve yapılacak işlemleri gerçekleştirmek için kullanılır.
+
+!!!UYARI:
+-> init metodundan önce bir de new metodu çalışır ve sınıfı inşa etmek için 
+kullanılır ancak biz kodlarımızda buna çok fazla yer vermeyeceğiz.
+
+DİKKAT!!
+-> Fonksiyonun ilk parametresi her zaman self olmak zorundadır!! Buradaki self 
+anahtar kelimesi, nesneyi temsil eder gibi düşünebilirsiniz!
+
+class Ogrenci:
+    def __init__(self):
+        self.ogrenciAd=""
+        print("Ogrenci Adi:",self.ogrenciAd)
+
+
+
+
+#init(self) Fonksiyonu İle Nesneye Değer Atama
+
+
+class Ogrenci():
+    def __init__(self,isim,soyisim,dersler):
+        self.ogrenciAd=isim
+        self.ogrenciSoyad=soyisim
+        self.ogrenciDersler=dersler
+        print("Ogrenci Adi:",self.ogrenciAd)
+        print("Ogrenci Soyadi:",self.ogrenciSoyad)
+        print("Ogrenci Dersleri:",self.ogrenciDersler)
+        
+        
+ogrenci1=Ogrenci("ogun","birinci",["C","C++"])
+ogrenci2=Ogrenci("burak","ikinci",["Java","C++"])
+
+
+
+
+
+---------------------------
+
+
+3. Nesne Metotları(Örneklem Metotları)
+
+
+-> Örneğin bir Araba sınıfını düşünecek olursak; arabanın hızı,modeli gibi 
+özellikler arabanın niteliklerini, arabanın hızının artması, azalması, 
+kontak açıp kapatma gibi işlemler ise bu arabanın fonksiyonlarını ifade eder.
+
+class Araba:
+    def __init__(self,marka,hizArtis,hizAzalis):
+        self.hiz=0
+        self.marka=marka
+        self.hizArtis=hizArtis
+        self.hizAzalis=hizAzalis
+    def bilgiYazdir(self):
+        print(self.marka)
+        print(self.hiz)
+    def hizArttir(self):
+        self.hiz+=self.hizArtis
+    def hizAzalt(self):
+        self.hiz-=self.hizAzalis
+
+
+araba1=Araba("Honda",50,30)
+araba2=Araba("BMW",100,60)
+
+
+araba1.bilgiYazdir()
+araba2.bilgiYazdir()
+
+araba1.hizArttir()
+araba2.hizArttir()
+
+araba1.bilgiYazdir()
+araba2.bilgiYazdir()
+
+araba1.hizAzalt()
+araba2.hizAzalt()
+
+araba1.bilgiYazdir()
+araba2.bilgiYazdir()
+
+
+---------------------------
+
+4. Sınıf Metotları, @classmethod ve cls Kavramı:
+
+-> Sınıf metodu tanımlayabilmek için @classmethod adı verilen bir 
+decorator(bezeyici) kullanıyoruz ve normal bir fonksiyonu sınıf metoduna 
+çevirmiş oluyoruz.
+
+#Ne Zaman Kullanacağız?
+
+->Bir nesneyi değil de genel olarak tüm sınıfı ilgilendiren fonksiyonlarda 
+kullanacağız.
+
+
+class Araba:
+    arabaListesi=[]
+    def __init__(self,marka,hizArtis,hizAzalis):
+        self.hiz=0
+        self.marka=marka
+        self.hizArtis=hizArtis
+        self.hizAzalis=hizAzalis
+        self.arabaListesi.append(marka)
+    def bilgiYazdir(self):
+        print(self.marka)
+        print(self.hiz)
+    def hizArttir(self):
+        self.hiz+=self.hizArtis
+    def hizAzalt(self):
+        self.hiz-=self.hizAzalis
+        
+    @classmethod
+    def arabalariYazdir(cls):
+        for araba in cls.arabaListesi:
+            print(araba)
+
+
+
+araba1=Araba("Honda",50,30)
+araba2=Araba("BMW",100,60)
+
+
+
+araba1.arabalariYazdir()
+araba2.arabalariYazdir()
+Araba.arabalariYazdir()
+
+
+---------------------------
+
+5. Statik Metotlar
+
+-> Yine sınıf metotları gibi, sınıf ile ilgili olan metotlardır ancak bu sefer; 
+sınıfın herhangi bir niteliğine erişmesine gerek yoktur.
+
+#Ne Zaman Kullanacağız?
+
+->Sınıf ile belirli bir ilişkisi olan ancak sınıfın niteliklerini kulllanmayacak 
+olan fonksiyonları statik olarak tanımlayabiliriz.
+
+
+
+class MyString:
+    stringListesi=[]
+    
+    def __init__(self,string):
+        print(string," listeye ekleniyor...")
+        self.string=string
+        self.stringListesi.append(string)
+        
+    @classmethod
+    def listeyiYazdir(cls):
+        for string in cls.stringListesi:
+            print(string)
+            
+    @staticmethod
+    def tersiniYazdir(string):
+        print(string[::-1])
+        
+string1=MyString("C")
+string2=MyString("Python")
+string3=MyString("C++")
+
+MyString.listeyiYazdir()
+
+
+---------------------------
+
+#Public(Açık)-Private(Gizli)-SemiPrivate(Yarı Gizli) Üyeler
+
+
+1. Public Üyeler: Sınıf dışından direkt olarak erişebildiğimiz nitelik ve metotlar public üyeler olarak adlandırılır.
+
+2. Private Üyeler: Sınıf dışından direkt olarak erişemediğimiz nitelik ve metotlar private üyeler olarak adlandırılır.
+
+3. Semi-Private Üyeler: Sınıf dışından direkt olarak erişebildiğimiz ancak sınıf dışından bu öğeyi değiştirmememiz gereken nitelik ve metotlar semi-private üyeler 
+olarak adlandırılır.
+
+
+
+class OrnekSinif:
+    publicUye="publicUye"
+    __privateUye="privateUye"
+    _semiPrivateUye="semiPrivateUye"
+    
+    
+print(OrnekSinif.publicUye)
+
+---------------------------
+
+
+#Miras İşlemleri(Inheritance)
+
+
+-> Miras işlemleri sayesinde sınıflar arasında belirli bir hiyerarşi oluşturabiliyor ve kodları daha alt parçalara ayırabiliyoruz. Bir kez yazdığımız kodları tekrar tekrar kullanmamızı sağladığı için de kod tekrarına düşmekten bizi kurtarıyor.
+
+
+1. Taban Sınıf(Parent-Super-Base Class): Birkaç farklı sınıfın ortak 
+niteliklerini ve metotlarını barındıran sınıf'a verilen isimdir. Taban sınıftan 
+miras alınarak daha alt sınıflar oluşturulabilir.
+
+2. Alt Sınıf(SubClass): Bir taban sınıftan miras alınarak oluşturulmuş sınıf'a 
+verilen isimdir. Taban sınıftan türetildiği için, taban sınıfın niteliklerine ve metotlarına sahip olacaktır.
+
+Örneğin; Ogrenci ve Ogretmen sınıflarını düşündüğümüzde bu iki sınıfta ortak olarak isim,soyisim,okul,yaş gibi nitelikler bulunmaktadır. Bu nitelikler Insan isminde bir sınıfta toplanabilir. Burada Insan taban sınıf, Ogrenci ve Ogretmen ise alt sınıflar olacaktır.
+
+
+---------------------------
+
+#Miras Alma Çeşitleri
+
+-> Bir alt sınıf, üst sınıftan miras alırken tüm nitelik ve metotları miras almak zorunda değildir. Gerekli durumlarda, miras alınan nitelik ve metotlar 
+değiştirilebilir.
+
+1. Tüm nitelik ve metotları da alabilir.
+2. Bazı nitelik ve metotlar miras alınıp değiştirilebilir.
+3. Bazı nitelik ve metotlar miras alınıp tamamen baştan tanımlanabilir.
+
+
+class Insan:
+    def __init__(self,isim,soyisim,okul,yas):
+        self.isim=isim
+        self.soyisim=soyisim
+        self.okul=okul
+        self.yas=yas
+    def bilgileriYazdir(self):
+        print("Isim:",self.isim)
+        print("Soyisim:",self.soyisim)
+        print("Okul:",self.okul)
+        print("Yas:",self.yas)
+
+class Ogretmen(Insan):
+    def bilgileriYazdir(self):
+        print("Ogretmen Bilgileri:")
+        print("Isim:",self.isim)
+        print("Soyisim:",self.soyisim)
+        print("Okul:",self.okul)
+        print("Yas:",self.yas)
+
+class Ogrenci(Insan):
+    def bilgileriYazdir(self):
+        print("Ogrenci Bilgileri:")
+        print("Isim:",self.isim)
+        print("Soyisim:",self.soyisim)
+        print("Okul:",self.okul)
+        print("Yas:",self.yas)
+
+
+
+
+ogretmen1=Ogretmen("ogun","birinci","IKU",22)
+ogretmen1.bilgileriYazdir()
+ogrenci1=Ogrenci("burak","ikinci","IKU",22)
+ogrenci1.bilgileriYazdir()
+
+
+
+
+
+###########################################################################
+
+
+----- Dosya İşlemleri -----
+
+
+
+
+
+# Neden İhtiyacımız Var?
+
+-> Program akışı içerisinde kullanıcıdan aldığımız veya hesapladığımız verileri, bilgileri, değerleri bilgisayarın hafızasında saklarız ancak program sonlandığı 
+zaman bu bilgiler de silinir ve erişilmesi mümkün olmaz. Daha sonradan 
+erişebilmek için bu verileri kalıcı halde saklamamız gerekir. Kalıcı depolama 
+yöntemleri için birçok yöntem mevcuttur, en temel olarak dosyaya yazarak bir disk üzerinde saklayabiliriz ve sonradan erişebiliriz.
+
+
+
+
+# Dosya Oluşturma-Açma ve Kapatma
+
+1.open() fonksiyonu: Dosya oluşturma veya dosyayı açma işlemleri için kullanılır.
+
+2.close() fonksiyonu: Dosya işlemleri bittikten sonra dosyayı kapatmak için kullanılır
+
+open("dosyanin_tam_yolu",dosya_acilis_modu)
+
+
+
+# Dosya Açılış Modları
+
+1."w": "write" anlamına geliyor ve dosyayı yazma modunda açmamızı sağlıyor. 
+Eğer ki belirtilen dosya yok ise dosya oluşturulur, var ise eski dosya içeriği 
+silinir.
+
+2."a": "append" anlamına geliyor ve dosyayı yazma modunda açmamızı sağlıyor. 
+Eğer ki belirtilen dosya yok ise dosya oluşturulur, var ise eski dosyanın sonuna 
+ekleme yapılır.
+
+3."r": "read" anlamına geliyor ve dosyayı okuma modunda açmamızı sağlıyor. 
+Eğer ki belirilen dosya var ise okuma yapılabilir.
+
+
+try:
+    dosya=open("ornek.txt","w")
+    dosya2=open("ornek2.txt","a")
+    dosya3=open("ornek3.txt","r")
+    dosya3.close()
+    dosya2.close()
+    dosya.close()
+except FileNotFoundError:
+    print("Dosya bulunamadir, okuma islemi yapilamiyor.")
+
+
+
+---------------------------
+
+
+# Dosyaya Veri Yazma
+
+1.write() fonksiyonu: Dosyayı açtıktan sonra, write fonksiyonunu kullanarak 
+dosyaya yazma işlemi yapabiliriz. Yan yana yazma işlemi yapılacaktır, alt satıra 
+geçmek için "\n" kullanılabilir
+
+
+dosya=open("ornek.txt",mode="w")
+dosya.write("Ogun Birinci")
+dosya.write("Python Programlama\n")
+dosya.write("Programlama\tOgun")
+dosya.close()
+
+
+
+---------------------------
+
+
+# Dosyadan Veri Okuma
+
+1.read() fonksiyonu: Dosyayı açtıktan sonra, read fonksiyonunu kullanarak dosyadan 
+okuma işlemi yapabiliriz.
+
+2.readline() fonksiyonu: Dosyayı açtıktan sonra, readline fonksiyonunu kullanarak dosyadan satır satır okuma işlemi yapabiliriz.
+
+3.readlines() fonksiyonu: Dosyayı açtıktan sonra, readlines fonksiyonunu kullanarak 
+tüm satırları okuyabilir ve döngü yardımıyla erişebiliriz.
+
+4.With Kullanarak da yapılabilinir close() fonksiyonuna gerek duymaz.
+
+with open("msg.txt") as file:
+    print(file.read())
+
+
+
+---------------------------
+
+
+# Dosyayı Silmeden Veri Yazma
+1.append() modu: Dosyayı açtıktan sonra, write fonksiyonunu kullanarak dosyaya yazma işlemi yapabiliriz.
+
+
+dosya=open("ornek.txt",mode="a")
+dosya.write("\nPython Programlama Kursu")
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
